@@ -1,0 +1,10 @@
+.card {
+}
+
+.home__left-card {
+	grid-column: 1/2;
+}
+
+.home__right-card {
+	grid-column: 2/3;
+}

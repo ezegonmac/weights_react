@@ -2,6 +2,8 @@
 
 :root {
 	--clr-1: #4b4b4b;
+	--clr-1-dark: #3c3c3c;
+	--clr-1-darker: #3a3a3a;
 	--clr-1-light: #c0c0c0;
 	--clr-2: #d464a2;
 	--clr-2-light: #d464a2;
@@ -18,13 +20,7 @@
 	box-sizing: border-box;
 }
 
-h3 {
-	color: #ffffff;
-	font-family: var(--font-family);
-	font-weight: 400;
-	letter-spacing: 1.5px;
-}
-
+h1,
 h4 {
 	color: #ffffff;
 	font-family: var(--font-family);
@@ -46,5 +42,7 @@ p {
 .content {
 	display: flex;
 	flex: auto;
+	flex-direction: column;
 	background-color: var(--clr-1);
+	padding: 2.5em 3em;
 }

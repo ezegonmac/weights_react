@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<nav className="navbar">
 			<a className="navbar__logo" href="/">
-				<img src="/Logo_v1.png" alt="weights" />
+				<img src="/images/Logo_v1.png" alt="weights" />
 			</a>
 			<div className="navbar__nav">
 				<NavbarLink text="NEW WEIGHT" url="/" />
