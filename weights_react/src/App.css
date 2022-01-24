@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+:root {
+	--clr-1: #4b4b4b;
+	--clr-1-light: #c0c0c0;
+	--clr-2: #d464a2;
+	--clr-2-light: #d464a2;
+	--clr-3: #33589a;
+	--clr-3-light: #7476b2;
+
+	--font-family: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h3 {
+	color: #ffffff;
+	font-family: var(--font-family);
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+
+h4 {
+	color: #ffffff;
+	font-family: var(--font-family);
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+
+p {
+	color: #ffffff;
+	font-family: var(--font-family);
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.content {
+	display: flex;
+	flex: auto;
+	background-color: var(--clr-1);
+}
