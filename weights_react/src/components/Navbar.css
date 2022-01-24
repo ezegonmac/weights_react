@@ -11,6 +11,23 @@
 	aspect-ratio: 1;
 	background-color: var(--clr-2);
 	position: relative;
+
+	background: linear-gradient(
+		90deg,
+		var(--clr-2) 0%,
+		var(--clr-2) 40%,
+		var(--clr-3) 60%,
+		var(--clr-3) 100%
+	);
+	background-size: 400% 400%;
+	background-position: 0% 50%;
+	transition: 0.7s ease-in-out;
+}
+
+.navbar__logo:hover,
+.navbar__logo:focus {
+	animation: 1s link__underline-hover alternate;
+	background-position: 100% 50%;
 }
 
 .navbar__logo img {
