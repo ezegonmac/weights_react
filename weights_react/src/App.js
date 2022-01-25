@@ -1,4 +1,5 @@
 import "./App.css"
+import "./home.css"
 import Card from "./components/Card"
 import Container from "./components/Container.js"
 import Navbar from "./components/Navbar.js"

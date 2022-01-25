@@ -1,0 +1,28 @@
+.container--home {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	gap: 4em;
+	position: relative;
+	overflow: hidden;
+}
+
+.container--home-extra {
+}
+
+.home__img {
+	width: 100%;
+	filter: opacity(0.8);
+}
+
+.home__title {
+	margin-bottom: 1em;
+}
+
+.home__scale-watermark {
+	position: absolute;
+	width: 560px;
+	filter: brightness(1.5);
+	right: -160px;
+	bottom: -280px;
+	transform: rotate(315deg);
+}
