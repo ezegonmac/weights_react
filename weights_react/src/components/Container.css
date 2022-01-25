@@ -9,7 +9,7 @@
 
 .container--home {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 	gap: 4em;
 	position: relative;
 	overflow: hidden;
@@ -19,7 +19,7 @@
 }
 
 .home__img {
-	max-width: 600px;
+	width: 100%;
 	filter: opacity(0.8);
 }
 
