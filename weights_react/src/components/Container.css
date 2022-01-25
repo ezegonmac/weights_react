@@ -1,16 +1,37 @@
 .container {
+	padding: 2em;
+}
+
+.container--main {
 	background: linear-gradient(135deg, var(--clr-1-dark) 0%, #343434 100%);
 	border-radius: 5px;
-	padding: 2em;
 }
 
 .container--home {
 	display: grid;
 	grid-template-columns: auto auto;
 	gap: 4em;
+	position: relative;
+	overflow: hidden;
+}
+
+.container--home-extra {
 }
 
 .home__img {
 	max-width: 600px;
 	filter: opacity(0.8);
+}
+
+.home__title {
+	margin-bottom: 1em;
+}
+
+.home__scale-watermark {
+	position: absolute;
+	width: 560px;
+	filter: brightness(1.5);
+	right: -160px;
+	bottom: -280px;
+	transform: rotate(315deg);
 }

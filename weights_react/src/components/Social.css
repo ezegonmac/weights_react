@@ -1,0 +1,19 @@
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 20%;
+	margin: 0.5em 2em;
+}
+
+.social a {
+	margin: 0.8em;
+	border-radius: 50%;
+	display: flex;
+}
+
+.social img {
+	width: 1.8em;
+	color: var(--clr-1-light);
+}
