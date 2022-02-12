@@ -1,7 +1,7 @@
 import Card from "../Card"
 import Container from "../Container.js"
 import Social from "../Social"
-import "./home.css"
+import "./Home.css"
 
 const Home = () => {
     return (
