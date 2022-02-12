@@ -12,7 +12,7 @@ const TablePage = () => {
             <Container className="container--table-options">
                 <Formik
                     initialValues={{ order: "", start: "", end: "" }}
-                    onSubmit={values => { console.log(values) }}
+                    onSubmit={values => { }}
                     validate={validate}>
                     <Form>
                         <SelectField name="order" label="Order by" >
