@@ -1,16 +1,15 @@
 import "./Navbar.css"
 import NavbarLink from "./NavbarLink.js"
+import NavbarLogo from "./NavbarLogo.js"
 
 const Navbar = () => {
 	return (
 		<nav className="navbar">
-			<a className="navbar__logo" href="/">
-				<img src="/images/Logo_v1.png" alt="weights" />
-			</a>
+			<NavbarLogo />
 			<div className="navbar__nav">
-				<NavbarLink text="NEW WEIGHT" url="/" />
-				<NavbarLink text="TABLE" url="/" />
-				<NavbarLink text="GRAPH" url="/" />
+				<NavbarLink text="NEW WEIGHT" url="/new-weight" />
+				<NavbarLink text="TABLE" url="/table" />
+				<NavbarLink text="GRAPH" url="/graph" />
 			</div>
 		</nav>
 	)

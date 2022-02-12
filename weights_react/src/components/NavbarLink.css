@@ -29,7 +29,8 @@
 }
 
 .navbar__link:hover .link__underline,
-.navbar__link:focus .link__underline {
+.navbar__link:focus .link__underline,
+.navbar__link.active .link__underline{
 	animation: 1s link__underline-hover alternate;
 	background-position: 100% 50%;
 }
