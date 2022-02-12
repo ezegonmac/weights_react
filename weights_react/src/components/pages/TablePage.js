@@ -2,18 +2,21 @@ import Container from '../Container.js'
 import './TablePage.css'
 import { Formik, Form } from 'formik'
 import SelectField from '../forms/SelectField.js'
-import TextField from '../forms/TextField.js'
+import DateField from '../forms/DateField.js'
+import * as Yup from 'yup'
 
 const TablePage = () => {
-    const options = ['hola', 'aWdios']
-    const validate = () => { return {} }
+    const options = ['hola', 'adios']
     return (
         <div className="content table-page">
             <Container className="container--table-options">
                 <Formik
                     initialValues={{ order: "", start: "", end: "" }}
                     onSubmit={values => { }}
-                    validate={validate}>
+                    validationSchema={Yup.object({
+                        start: Yup.date().typeError('It must be a number'),
+                        end: Yup.date().typeError('It must be a number'),
+                    })}>
                     <Form>
                         <SelectField name="order" label="Order by" >
                             {options.map(option =>
@@ -21,8 +24,8 @@ const TablePage = () => {
                                     {option}
                                 </option>)}
                         </SelectField>
-                        <TextField name="start" label="Start" />
-                        <TextField name="end" label="End" />
+                        <DateField name="start" label="Start" />
+                        <DateField name="end" label="End" />
                         <button type="submit">Search</button>
                     </Form>
                 </Formik>
