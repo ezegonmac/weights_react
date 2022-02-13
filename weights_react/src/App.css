@@ -68,7 +68,6 @@ button:active {
 input,
 select {
 	outline: none;
-	border: none;
 	font-family: var(--font-family);
 	color: var(--clr-1-light);
 	background-color: var(--clr-1);
@@ -82,7 +81,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	margin-right: 2px;
 	opacity: 0.6;
 	filter: invert(0.8);
-  }
+}
+
+table, th, td {
+	border: 1px solid var(--clr-1-light);
+	border-collapse: collapse;
+	font-family: var(--font-family);
+}
+
+th, td {
+	padding: 0.5em;
+}
+
+th {
+	color: #ffffff;
+}
+
+td {
+	color: var(--clr-1-light);
+}
 
 #app {
 	display: flex;

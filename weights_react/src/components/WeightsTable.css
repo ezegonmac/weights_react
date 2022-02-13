@@ -1,0 +1,18 @@
+
+.weights-table {
+    width: 100%;
+}
+
+.weights-table__edit {
+    width: 3em;
+    height: 3em;
+}
+
+.weights-table__edit img {
+    width: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+	filter: invert(0.8);
+} 

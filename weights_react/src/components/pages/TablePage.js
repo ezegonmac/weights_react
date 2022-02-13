@@ -1,13 +1,16 @@
-import Container from '../Container.js'
+import { Formik, Form } from 'formik'
+import * as Yup from 'yup'
 import './TablePage.css'
 import '../forms/TableOptions.css'
-import { Formik, Form } from 'formik'
+import Container from '../Container.js'
 import SelectField from '../forms/SelectField.js'
 import DateField from '../forms/DateField.js'
-import * as Yup from 'yup'
+import WeightsTable from '../WeightsTable.js'
 
 const TablePage = () => {
     const options = ['Date', 'Weight']
+    const datesWeights = [{ id: 1, date: "20/10/2020", weight: 67.7 }, { id: 2, date: "21/10/2020", weight: 67.8 }, { id: 3, date: "22/10/2020", weight: 68 }, { id: 3, date: "24/10/2020", weight: 69 }, { id: 4, date: "25/10/2020", weight: 67 }]
+
     return (
         <div className="content table-page">
             <Container className="container--table-options">
@@ -32,7 +35,7 @@ const TablePage = () => {
                 </Formik>
             </Container>
             <Container className="container--table container--main">
-
+                <WeightsTable data={datesWeights} />
             </Container>
         </div>
     )
