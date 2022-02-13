@@ -36,6 +36,54 @@ p {
 	font-size: 20px;
 }
 
+label {
+	color: #ffffff;
+	font-family: var(--font-family);
+	font-size: 20px;
+	display: flex;
+    align-items: center;
+}
+
+button {
+	background-color: var(--clr-3);
+	color: #ffffff;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 17px;
+	outline: none;
+	border: none;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+	min-width: 12em;
+	min-height: 2.5em;
+	text-align: left;
+	padding-inline: 3%;
+}
+
+button:active {
+	background-color: var(--clr-3-light);
+	box-shadow: none;
+	transform: translateX(2px) translateY(2px);
+}
+
+input,
+select {
+	outline: none;
+	border: none;
+	font-family: var(--font-family);
+	color: var(--clr-1-light);
+	background-color: var(--clr-1);
+	border: 1px solid var(--clr-1-light);
+	min-width: 11em;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	border-radius: 4px;
+	margin-right: 2px;
+	opacity: 0.6;
+	filter: invert(0.8);
+  }
+
 #app {
 	display: flex;
 	flex-direction: column;

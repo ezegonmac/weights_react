@@ -1,12 +1,13 @@
 import Container from '../Container.js'
 import './TablePage.css'
+import '../forms/TableOptions.css'
 import { Formik, Form } from 'formik'
 import SelectField from '../forms/SelectField.js'
 import DateField from '../forms/DateField.js'
 import * as Yup from 'yup'
 
 const TablePage = () => {
-    const options = ['hola', 'adios']
+    const options = ['Date', 'Weight']
     return (
         <div className="content table-page">
             <Container className="container--table-options">
@@ -17,16 +18,16 @@ const TablePage = () => {
                         start: Yup.date().typeError('It must be a number'),
                         end: Yup.date().typeError('It must be a number'),
                     })}>
-                    <Form>
-                        <SelectField name="order" label="Order by" >
+                    <Form className="table-options">
+                        <SelectField name="order" label="Order by" className="table-options__input">
                             {options.map(option =>
                                 <option key={option} value={option.toLowerCase()}>
                                     {option}
                                 </option>)}
                         </SelectField>
-                        <DateField name="start" label="Start" />
-                        <DateField name="end" label="End" />
-                        <button type="submit">Search</button>
+                        <DateField name="start" label="Start" className="table-options__input" />
+                        <DateField name="end" label="End" className="table-options__input" />
+                        <button type="submit" className="table-options__btn">Search</button>
                     </Form>
                 </Formik>
             </Container>

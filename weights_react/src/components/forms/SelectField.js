@@ -5,9 +5,9 @@ const SelectField = ({ label, ...props }) => {
     const [field, meta] = useField(props)
 
     return (
-        <div className="field select-field">
-            <label>{label}</label>
-            <select {...field} {...props} />
+        <div className="table-options__field table-options__field--select">
+            <label className="table-options__label" >{label}</label>
+            <select className="table-options__select" {...field} {...props} />
             {meta.touched && meta.error ? <FormError>{meta.error}</FormError> : null}
         </div>
     )
