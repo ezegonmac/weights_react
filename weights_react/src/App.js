@@ -2,6 +2,7 @@ import "./App.css"
 import Navbar from "./components/Navbar.js"
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/pages/Home.js'
+import Footer from './components/Footer.js'
 import TablePage from "./components/pages/TablePage"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 				<Route path="/graph" element={<h1>Graph</h1>} />
 				<Route path="*" element={<h1 style={{ color: "black", textAlign: "center" }}>404 error: Not found</h1>} />
 			</Routes>
+			<Footer />
 		</div >
 	)
 }

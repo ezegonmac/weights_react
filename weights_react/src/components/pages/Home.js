@@ -24,10 +24,6 @@ const Home = () => {
                     alt=""
                 />
             </Container>
-            <Container className="container--home-extra">
-                <p>Created by Ezequiel González Macho</p>
-                <Social />
-            </Container>
         </div>
     )
 }
