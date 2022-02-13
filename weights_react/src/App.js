@@ -5,6 +5,7 @@ import Home from './components/pages/Home.js'
 import Footer from './components/Footer.js'
 import TablePage from "./components/pages/TablePage.js"
 import NewWeightPage from "./components/pages/NewWeightPage.js"
+import NotFoundPage from "./components/pages/NotFoundPage"
 
 function App() {
 	return (
@@ -15,7 +16,7 @@ function App() {
 				<Route path="/new-weight" element={<NewWeightPage />} />
 				<Route path="/table" element={<TablePage />} />
 				<Route path="/graph" element={<h1>Graph</h1>} />
-				<Route path="*" element={<h1 style={{ color: "black", textAlign: "center" }}>404 error: Not found</h1>} />
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 			<Footer />
 		</div >
