@@ -9,6 +9,7 @@
 	--clr-2-light: #d464a2;
 	--clr-3: #33589a;
 	--clr-3-light: #7476b2;
+	--clr-error: #ff4f4f;
 
 	--font-family: "Open Sans", sans-serif;
 }
@@ -72,7 +73,7 @@ select {
 	color: var(--clr-1-light);
 	background-color: var(--clr-1);
 	border: 1px solid var(--clr-1-light);
-	min-width: 11em;
+	min-width: 12em;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

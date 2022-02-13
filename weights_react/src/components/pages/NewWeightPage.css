@@ -1,0 +1,17 @@
+
+.new-weight__form {
+    width: 100%;
+}
+
+.new-weight__inputs {
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new-weight__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,7 +1,6 @@
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import './TablePage.css'
-import '../forms/TableOptions.css'
 import Container from '../Container.js'
 import SelectField from '../forms/SelectField.js'
 import DateField from '../forms/DateField.js'
@@ -16,10 +15,10 @@ const TablePage = () => {
             <Container className="container--table-options">
                 <Formik
                     initialValues={{ order: "", start: "", end: "" }}
-                    onSubmit={values => { }}
+                    onSubmit={values => { console.log(values) }}
                     validationSchema={Yup.object({
-                        start: Yup.date().typeError('It must be a number'),
-                        end: Yup.date().typeError('It must be a number'),
+                        start: Yup.date().typeError('It must be a date'),
+                        end: Yup.date().typeError('It must be a date'),
                     })}>
                     <Form className="table-options">
                         <SelectField name="order" label="Order by" className="table-options__input">

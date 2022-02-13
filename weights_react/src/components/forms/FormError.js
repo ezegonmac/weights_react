@@ -1,7 +1,8 @@
+import './Forms.css'
 
 const FormError = ({ children }) => {
     return (
-        <p className="formError">{children}</p>
+        <p className="form__error">{children}</p>
     )
 }
 
