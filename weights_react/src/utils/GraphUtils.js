@@ -2,6 +2,23 @@ import { add, differenceInCalendarDays } from "date-fns"
 import { dateFormatterDays, dateFormatterMonths, dateFormatterYears } from "./DateUtils.js"
 import { differenceInMonths, differenceInYears } from 'date-fns/esm';
 
+const getAxisUnit = (data, startDate, endDate) => {
+    const diffYears = endDate.getFullYear() - startDate.getFullYear()
+    const diffMonths = endDate.getMonth() - startDate.getMonth()
+
+    if (diffYears >= 1 && data.length > 30) {
+        return "years"
+    }
+    else if (diffYears >= 2) {
+        return "years"
+    }
+    else if (diffMonths >= 5) {
+        return "months"
+    }
+    else {
+        return "days"
+    }
+}
 
 const fillTicksData = (_ticks, data) => {
     const ticks = [..._ticks]
@@ -97,4 +114,4 @@ const getTickFormatter = (type) => {
     }
 }
 
-export { fillTicksData, getTicks, getTickFormatter }
+export { fillTicksData, getTicks, getTickFormatter, getAxisUnit }

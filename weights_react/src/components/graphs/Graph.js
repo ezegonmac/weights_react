@@ -1,25 +1,7 @@
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip } from 'recharts';
 import CustomTooltip from './CustomTooltip.js';
-import { getTicks, getTickFormatter, fillTicksData } from '../../utils/TicksUtils.js'
+import { getTicks, getTickFormatter, getAxisUnit, fillTicksData } from '../../utils/GraphUtils.js'
 import "./Graphs.css"
-
-const getAxisUnit = (data, startDate, endDate) => {
-    const diffYears = endDate.getFullYear() - startDate.getFullYear()
-    const diffMonths = endDate.getMonth() - startDate.getMonth()
-
-    if (diffYears >= 1 && data.length > 30) {
-        return "years"
-    }
-    else if (diffYears >= 2) {
-        return "years"
-    }
-    else if (diffMonths >= 5) {
-        return "months"
-    }
-    else {
-        return "days"
-    }
-}
 
 const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) => {
     // Styles
@@ -37,8 +19,6 @@ const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) =>
 
     startDate = startDate || new Date(data[0].date)
     endDate = endDate || new Date(data[data.length - 1].date)
-
-    axisUnit = null
 
     axisUnit = axisUnit || getAxisUnit(data, startDate, endDate)
 
