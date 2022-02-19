@@ -1,0 +1,40 @@
+.stat {
+    display: flex;
+    align-items: flex-start;
+    padding: 1em 2em;
+    width: 300px;
+    /* border: 1px solid #ff27ed; */
+}
+
+.stat > * {
+    display: flex;
+    align-items: flex-end;
+    white-space: nowrap;
+    /* border: 1px solid #ffffff; */
+}
+
+.stat__label {
+    font-size: 20px;
+}
+
+.stat__value {
+    color: var(--clr-2-light);
+    font-size: 22px;
+    text-align: end;
+    margin-left: 0.5em;
+}
+
+.stat--primary > .stat__value {
+    color: var(--clr-4-light);
+    font-size: 26px;
+}
+
+.stat--secondary > .stat__value {
+    color: var(--clr-3-light);
+    font-size: 26px;
+}
+
+.stat--tertiary > .stat__value {
+    color: var(--clr-2-light);
+    font-size: 26px;
+}

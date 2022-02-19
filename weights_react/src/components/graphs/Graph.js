@@ -16,7 +16,7 @@ const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) =>
     const datesWeights1 = [{ id: 1, date: "2020-10-20", weight: 67.7 }, { id: 2, date: "2020-10-21", weight: 67.8 }, { id: 3, date: "2020-10-22", weight: 68.0 }, { id: 3, date: "2020-10-24", weight: 69.0 }, { id: 4, date: "2020-10-25", weight: 70 }, { id: 5, date: "2020-11-26", weight: 75 }, { id: 6, date: "2020-12-28", weight: 65 }, { id: 7, date: "2021-1-1", weight: 64 }]
     const datesWeights2 = [{ id: 1, date: "2020-10-20", weight: 67.7 }, { id: 2, date: "2020-10-21", weight: 67.8 }, { id: 3, date: "2020-10-22", weight: 68.0 }, { id: 3, date: "2020-10-24", weight: 69.0 }, { id: 4, date: "2020-10-25", weight: 70 }, { id: 5, date: "2020-11-26", weight: 75 }, { id: 6, date: "2020-12-28", weight: 65 }, { id: 7, date: "2021-1-1", weight: 64 }, { id: 8, date: "2021-2-10", weight: 69 }, { id: 9, date: "2022-1-4", weight: 70 }]
     const datesWeights3 = [{ id: 1, date: "2020-10-20", weight: 67.7 }, { id: 2, date: "2020-10-21", weight: 67.8 }, { id: 3, date: "2020-10-22", weight: 68.0 }, { id: 3, date: "2020-10-24", weight: 69.0 }, { id: 4, date: "2020-10-25", weight: 70 }, { id: 5, date: "2020-11-26", weight: 75 }, { id: 6, date: "2020-12-28", weight: 65 }, { id: 7, date: "2021-1-1", weight: 64 }, { id: 8, date: "2021-2-2", weight: 65 }]
-    data = datesWeights3.map((x) => { return { id: x.id, date: new Date(x.date).getTime(), weight: x.weight } })
+    data = datesWeights1.map((x) => { return { id: x.id, date: new Date(x.date).getTime(), weight: x.weight } })
 
     startDate = startDate || new Date(data[0].date)
     endDate = endDate || new Date(data[data.length - 1].date)

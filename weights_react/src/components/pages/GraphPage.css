@@ -1,0 +1,11 @@
+.graph__stats-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.graph__stats-section {
+    display: flex;
+	gap: 1em;
+    flex-wrap: wrap;
+}
