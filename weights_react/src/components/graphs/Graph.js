@@ -1,6 +1,7 @@
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip } from 'recharts';
 import CustomTooltip from './CustomTooltip.js';
-import { getTicks, getTickFormatter, getAxisUnit, fillTicksData } from '../../utils/GraphUtils.js'
+import { getTicks, getTickFormatter, getAxisUnit, fillTicksData, tooltipFormatter } from '../../utils/GraphUtils.js'
+import Mean from './Mean.js';
 import "./Graphs.css"
 
 const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) => {
@@ -32,7 +33,7 @@ const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) =>
                 <LineChart
                     width="100%"
                     height={600}
-                    data={data}>
+                >
                     <CartesianGrid stroke={gridStroke} />
                     <XAxis
                         dataKey="date"
@@ -50,14 +51,24 @@ const Graph = ({ data, startDate, endDate, axisUnit, hasMean, hasDirection }) =>
                         unit="Kg"
                         stroke={axisStroke}
                         domain={['dataMin - 5', 'dataMax + 5']} />
+                    <Tooltip
+                        content={<CustomTooltip />}
+                        formatter={tooltipFormatter} />
+                    {Mean({
+                        data: data,
+                        startDate: startDate,
+                        endDate: endDate
+                    })}
                     <Line
-                        connectNulls
+                        name="weights"
+                        data={data}
                         type="monotone"
                         dataKey="weight"
                         stroke={lineStroke}
                         strokeWidth="2"
+                        activeDot={false}
                         fill={lineFill} />
-                    <Tooltip content={<CustomTooltip />} />
+
                 </LineChart>
             </ResponsiveContainer>
         </div>

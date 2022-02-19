@@ -114,4 +114,9 @@ const getTickFormatter = (type) => {
     }
 }
 
-export { fillTicksData, getTicks, getTickFormatter, getAxisUnit }
+const tooltipFormatter = ({ value, name }) => {
+    if (name === 'mean') return null
+    return <p>hola</p>
+}
+
+export { fillTicksData, getTicks, getTickFormatter, getAxisUnit, tooltipFormatter }
