@@ -1,0 +1,17 @@
+.graph__form {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1.5em;
+}
+
+.graph-form__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}

@@ -26,7 +26,7 @@
 
 .stat--primary > .stat__value {
     color: var(--clr-4-light);
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .stat--secondary > .stat__value {
@@ -36,5 +36,5 @@
 
 .stat--tertiary > .stat__value {
     color: var(--clr-2-light);
-    font-size: 26px;
+    font-size: 22px;
 }
