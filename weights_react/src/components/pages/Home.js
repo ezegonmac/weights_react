@@ -1,6 +1,5 @@
 import Card from "../Card"
 import Container from "../Container.js"
-import Social from "../Social"
 import "./Home.css"
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
                 <Card className="home__left-card">
                     <img
                         className="home__img"
-                        src="/images/home_hero.jpg"
+                        src="images/home_hero.jpg"
                         alt="weight scale"
                     />
                 </Card>
@@ -20,7 +19,7 @@ const Home = () => {
                 </Card>
                 <img
                     className="home__scale-watermark"
-                    src="/images/Scale_v1.png"
+                    src="images/Scale_v1.png"
                     alt=""
                 />
             </Container>

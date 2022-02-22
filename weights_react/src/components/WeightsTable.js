@@ -14,7 +14,7 @@ const WeightsTable = ({ data }) => {
                         <td className="weights-table__date">{x.date}</td>
                         <td className="weights-table__weight">{x.weight}</td>
                         <td className="weights-table__edit">
-                            <a href={`/edit-weight?id=${x.id}`}><img alt="edit" src="/icons/edit-buttons_icon.svg" /> </a>
+                            <a href={`/edit-weight?id=${x.id}`}><img alt="edit" src="icons/edit-buttons_icon.svg" /> </a>
                         </td>
                     </tr>)}
             </tbody>
